@@ -292,10 +292,10 @@ html,body{
 .cnt{
     width: 100%;
     overflow: hidden;
+    border-radius: 40px;
 }
 .cnt img{
     width: 100%;
-    border-radius: 40px;
     transition: filter cubic-bezier(.19,1,0.22,1)1s;
 }
 .cnt1{
