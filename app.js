@@ -64,6 +64,10 @@ tl
         })
     }
 })
+
+
+
+
 // .to('.hero .row .parent .child',{
 //     y:0,
 //     stagger:.1,
