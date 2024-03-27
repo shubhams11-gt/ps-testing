@@ -82,8 +82,12 @@ html,body{
 .highlited{
     color: var(--main-theme-color);
 }
+.contact-section h1 .highlited {
+    margin-left: 0vw;
+}
 
 /* ------------------ */
+
 
 .home{
     width: 100%;
@@ -128,11 +132,28 @@ html,body{
 .row:nth-child(2){
     margin-top: -6vh;
 }
+.char {
+    transform: translateY(185px);
+    transition: transform .5s;
+}
+.char-2 {
+    transform: translateY(-245px);
+    transition: transform .3s;
+}
+.char-3 {
+    transform: translateY(-205px);
+    transition: transform .3s;
+}
+.reveal-2{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    line-height: 12vw;
+}
+
 
 .imagery{
     width: 100%;
     padding: 6vw 7vw;
-    margin-top: 9vw;
+    margin-top: 16vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

@@ -49,7 +49,20 @@ tl
     height: 0,
     duration:1,
     delay:-.3,
-    ease: Circ.easeInOut,
+    ease: Circ.easeInOut,onComplete: () => {
+        let reveal2 = document.querySelector('.reveal-2')
+        gsap.to('.char', {
+            y: 0,
+            stagger: 0.05,
+            delay: 0.1,
+            duration: .08
+        }).to('.char-2',{
+            y: 0,
+            stagger: 0.1,
+            delay: 0.3,
+            duration: .1
+        })
+    }
 })
 // .to('.hero .row .parent .child',{
 //     y:0,
@@ -78,6 +91,11 @@ tl
 
 // animateHomepage();
 
+// -------------------
+
+
+
+// -------------------
 
 
 function cardHoverEffect(){
@@ -109,4 +127,3 @@ function locoInitialize(){
 }
 
 locoInitialize();
-
