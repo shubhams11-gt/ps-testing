@@ -43,7 +43,15 @@ tl
     duration:.8,
     top:0,
     delay: -.5,
-    ease: Expo.easeInOut
+    ease: Expo.easeInOut,onComplete: () => {
+        let reveal2 = document.querySelector('.reveal-2')
+        gsap.to('.char-2',{
+            y: 0,
+            stagger: 0.1,
+            delay: 0.3,
+            duration: .1
+        })
+    }
 })
 .to(".green",{
     height: 0,
@@ -53,9 +61,9 @@ tl
         let reveal2 = document.querySelector('.reveal-2')
         gsap.to('.char', {
             y: 0,
-            stagger: 0.05,
+            stagger: 0.02,
             delay: 0.1,
-            duration: .08
+            duration: .01
         }).to('.char-2',{
             y: 0,
             stagger: 0.1,
