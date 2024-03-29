@@ -31,7 +31,22 @@ tl
     y:'-100%',
     duration:1,
     dealy:1,
-    ease: Circ.easeInOut
+    ease: Circ.easeInOut,
+    onComplete:()=>{
+        document.querySelectorAll("#Visual>g>g>path, #Visual>g>g>polyline ").forEach(function(e){
+            var character = e
+        
+            character.style.strokeDasharray = character.getTotalLength() + 'px';
+            character.style.strokeDashoffset = character.getTotalLength() + 'px';
+        })
+    
+        gsap.to('#Visual>g>g>path , #Visual>g>g>polyline',{
+            strokeDashoffset:0,
+            duration:2,
+            ease:Expo.easeInOut,
+            delay:2
+        })
+    }
 })
 .to(".loader",{
     height: 0,
@@ -73,40 +88,6 @@ tl
     }
 })
 
-
-
-
-// .to('.hero .row .parent .child',{
-//     y:0,
-//     stagger:.1,
-//     duration:2,
-//     ease: Expo.easeInOut
-// })
-
-
-// function valueSetters(){
-//     gsap.set('.nav a',{y:'-100%',opacity:0});
-//     gsap.set('.home span .child',{y:'100%'});
-// }
-// valueSetters();
-
-// function animateHomepage(){
-//     let tl = gsap.timeline();
-
-//     tl.to('.hero .parent .child',{
-//         y:0,
-//         stagger:.1,
-//         duration:2,
-//         ease: Expo.easeInOut
-//     })
-// }
-
-// animateHomepage();
-
-// -------------------
-
-
-
 // -------------------
 
 
@@ -130,6 +111,13 @@ function cardHoverEffect(){
 
 cardHoverEffect();
 
+// -------------------
+
+// function animateSvg(){
+    
+// }
+// animateSvg();
+
 
 function locoInitialize(){
     const scroll = new LocomotiveScroll({
@@ -139,3 +127,5 @@ function locoInitialize(){
 }
 
 locoInitialize();
+
+
