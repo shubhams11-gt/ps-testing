@@ -17,6 +17,7 @@ function revealToSpan(){
 
 revealToSpan();
 
+
 let tl = gsap.timeline();
 
 tl
